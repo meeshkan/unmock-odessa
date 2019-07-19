@@ -26,3 +26,11 @@ test("setting a value for endpoint", async () => {
   // https://github.com/unmock/unmock-js/issues/93
   expect(res.data).toEqual({ hello: "foo" });
 });
+
+test("failure setting a value for endpoint", async () => {
+  unmock.states().hello({ hello: "world" });
+  var res = await axios.get("https://api.unmock.io");
+  // TODO: Fix after this bug is fixed
+  // https://github.com/unmock/unmock-js/issues/93
+  expect(res.data).toEqual({ hello: "world" });
+});
