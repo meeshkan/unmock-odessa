@@ -1,0 +1,6 @@
+servers:
+- url: https://api.foo.com
+paths:
+  /hello:
+    hello:
+      world
