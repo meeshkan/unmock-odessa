@@ -13,6 +13,8 @@
     "unmock": "^0.1.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint:fix": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\""
   }
 }
